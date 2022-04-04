@@ -1,0 +1,35 @@
+body
+{
+    background: #5312eb; 
+    /* font-family: 'Imperial Script', cursive; */
+}
+.brand
+{
+    color:aliceblue;
+    background-color: black;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    }
+
+.food
+{
+    width: 40%;
+    background-color: black;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 5px;
+    float: left;
+}
+.water
+{
+    width: 40%;
+    background-color: black;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 5px;
+    float: left;
+}
