@@ -1,6 +1,6 @@
 body
 {
-    background: #5312eb; 
+    background: #08cfee; 
     /* font-family: 'Imperial Script', cursive; */
 }
 .brand
@@ -17,7 +17,7 @@ body
 
 .food
 {
-    width: 40%;
+    width: 45%;
     background-color: black;
     padding: 10px;
     margin: 20px;
@@ -26,10 +26,14 @@ body
 }
 .water
 {
-    width: 40%;
+    width: 45%;
     background-color: black;
     padding: 10px;
     margin: 20px;
     border-radius: 5px;
     float: left;
+}
+h6{
+    color: white;
+    float: center;
 }
