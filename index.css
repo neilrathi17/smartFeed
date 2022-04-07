@@ -37,3 +37,17 @@ h6{
     color: white;
     float: center;
 }
+h5
+{
+    color: white;
+}
+.btn-small
+{
+    color: #5312eb;
+    
+}
+.btn-light:hover
+{
+    color: white;
+    background-color: #5312eb;
+}
