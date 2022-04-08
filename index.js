@@ -1,12 +1,12 @@
 getdata()
 function water()
 {
-    requestt("https://api.thingspeak.com/update?api_key=SUY4417W22YI4RKQ&field2=1000")
+    requestt("https://api.thingspeak.com/update?api_key=SUY4417W22YI4RKQ&field2=12")
     console.log('sent water data')
 }
 function food()
 {
-    requestt("https://api.thingspeak.com/update?api_key=SUY4417W22YI4RKQ&field1=1000")
+    requestt("https://api.thingspeak.com/update?api_key=SUY4417W22YI4RKQ&field1=4")
     console.log('sent food data')
 }
 function requestt(url)
