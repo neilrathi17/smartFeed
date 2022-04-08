@@ -15,28 +15,33 @@
 <body>
     
     <nav class="navbar navbar-expand-md navbar-light  top">
-        <div class="brand" href="index.html"> SmartFeed</div>
+        <div class="brand" href="index.html"> <span onclick="getdata()">SmartFeed</span> </div>
     </nav>
     
     <div class="container mains">
         <div class="food">
-            <h4 style="text-align: center; color: aliceblue; border-bottom: 1px solid #5312eb;">FOOD</h4>
+            <h4 style="text-align: center; color: aliceblue; border-bottom: 1px solid #5312eb;padding-bottom: 10px;">FOOD</h4>
             <hr style="color: #5312eb;">
-            <h6>Current levels: <span id="food-refill"></span> </h6>
+            <div class="container" style="text-align: center;">
+            <h5>Current levels: <span id="food-refill"></span> </h5>
             <hr>
             <h5>Last Refill</h5>
             <hr>
-            <button onclick="getdata()" class="btn btn-small btn-light" >REFILL</button>
+            <button onclick="food()" class="btn btn-small btn-light" >REFILL</button>
+        </div>
         </div>
      
         <div class="water">
-            <h4 style="text-align: center;color: aliceblue;border-bottom: 1px solid #5312eb;">WATER</h4>
+        
+            <h4 style="text-align: center;color: aliceblue;border-bottom: 1px solid #5312eb; padding-bottom: 10px;">WATER</h4>
             <hr style="color: #5312eb;">
-            <h6>Current levels: <span id="water-refill"></span></h6>
+            <div class="container" style="text-align: center;">
+            <h5>Current levels: <span id="water-refill"></span></h5>
             <hr>
             <h5>Last Refill:</h5>
             <hr>
             <button onclick="water()" class="btn btn-small btn-light" > <span>REFILL</span></button>
+        </div>
         </div>
     </div>
     

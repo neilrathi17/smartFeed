@@ -22,6 +22,7 @@ function requestt(url)
         if(this.status==200 && this.readyState==4)
         {
             var data = JSON.parse(this.responseText)
+            getdata()
             //document.getElementById("loading").innerHTML = '';
     
         }
@@ -51,7 +52,7 @@ function getdata()
             var data = JSON.parse(this.responseText)
             console.log(data)
             document.getElementById("water-refill").innerHTML = data["feeds"][1]["field2"];
-            document.getElementById("food-refill").innerHTML = data["feeds"][1]["field1"];
+            document.getElementById("food-refill").innerHTML = data["feeds"][0]["field1"];
     
         }
         else if(this.status==400){
@@ -62,4 +63,15 @@ function getdata()
             console.log('Please authenticate user')
         }
     }
+}
+gettime()
+function gettime()
+{
+var currentdate = new Date();
+var datetime =currentdate.getHours() + ":" 
++ currentdate.getMinutes() + ":" + currentdate.getSeconds()+ " on "+currentdate.getDay() + "/" + currentdate.getMonth() 
++ "/" + currentdate.getFullYear();
++ 
+console.log(datetime)
+
 }
