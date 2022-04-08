@@ -3,12 +3,16 @@ function water()
 {
     requestt("https://api.thingspeak.com/update?api_key=SUY4417W22YI4RKQ&field2=12")
     console.log('sent water data')
+    gettime1()
 }
+
 function food()
 {
     requestt("https://api.thingspeak.com/update?api_key=SUY4417W22YI4RKQ&field1=4")
     console.log('sent food data')
+    gettime2()
 }
+
 function requestt(url)
 {
     
@@ -36,6 +40,7 @@ function requestt(url)
         //getdata()
     }
 }
+    
 function getdata()
 {
     console.log("request made")
@@ -51,8 +56,8 @@ function getdata()
         {
             var data = JSON.parse(this.responseText)
             console.log(data)
-            document.getElementById("water-refill").innerHTML = data["feeds"][1]["field2"];
-            document.getElementById("food-refill").innerHTML = data["feeds"][0]["field1"];
+            document.getElementById("water-refill").innerHTML = data["feeds"][0]["field2"];
+            document.getElementById("food-refill").innerHTML = data["feeds"][1]["field1"];
     
         }
         else if(this.status==400){
@@ -64,8 +69,8 @@ function getdata()
         }
     }
 }
-gettime()
-function gettime()
+
+function gettime1()
 {
 var currentdate = new Date();
 var datetime =currentdate.getHours() + ":" 
@@ -73,5 +78,16 @@ var datetime =currentdate.getHours() + ":"
 + "/" + currentdate.getFullYear();
 + 
 console.log(datetime)
+document.getElementById("water-time").innerHTML = datetime;
+}
 
+function gettime2()
+{
+var currentdate = new Date();
+var datetime =currentdate.getHours() + ":" 
++ currentdate.getMinutes() + ":" + currentdate.getSeconds()+ " on "+currentdate.getDay() + "/" + currentdate.getMonth() 
++ "/" + currentdate.getFullYear();
++ 
+console.log(datetime)
+document.getElementById("food-time").innerHTML = datetime;
 }
