@@ -37,6 +37,7 @@ background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6); /* W3
     border-radius: 5px;
     float: left;
 }
+
 h6{
     color: white;
     float: center;
@@ -54,4 +55,11 @@ h5
 {
     color: white;
     background-color: #5312eb;
+}
+.alert
+{
+    background-color: black;
+    width: 80%;
+    position: relative;
+    display: none ;
 }
