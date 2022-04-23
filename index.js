@@ -95,12 +95,12 @@ document.getElementById("food-time").innerHTML = datetime;
 
 function checkpet(data)
 {
-    var checker=data["feeds"][0]["field3"];
-    console.log(data["feeds"][0]["field3"])
+    var checker=data["feeds"][1]["field3"];
+    console.log(data["feeds"][1]["field3"])
     //checker=1;
-    if(checker===1)
+    if(checker==="1")
     {
-        console.log('checking')
+        console.log('pet is near')
         document.getElementById("petalert").innerHTML = "Pet is near the feeder";
        var pokemon= document.getElementsByClassName('alert');
        console.log(pokemon)
@@ -109,7 +109,7 @@ function checkpet(data)
     }
     else
     {
-        console.log('checking')
+        console.log('not near')
         //var active = document.querySelector("alert");
         var pokemon= document.getElementsByClassName('alert');
         pokemon[0].classList.remove("class_two");
