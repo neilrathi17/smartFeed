@@ -7,6 +7,11 @@ background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6); /* W3
 
     /* font-family: 'Imperial Script', cursive; */
 }
+.mains
+{
+    display: block;
+    height: 40%;
+}
 .brand
 {
     color:aliceblue;
@@ -58,8 +63,35 @@ h5
 }
 .alert
 {
-    background-color: black;
+    background-color:red ;
     width: 80%;
-    position: relative;
-    display: none ;
+    display: block;
+    margin: 0 auto  ;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid black;
+    display: none;
+}
+#petalert
+{
+    text-align: center;
+    color: white;   
+}
+.class_two
+{   
+    background-color: #01a714;
+}
+@media(max-width:700px)
+{
+    .food
+    {
+        width: 90%;
+        display: block;
+    }
+    .water
+    {
+        width: 90%;
+        display: block;
+    }
 }

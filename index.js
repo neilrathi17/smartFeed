@@ -56,6 +56,7 @@ function getdata()
         {
             var data = JSON.parse(this.responseText)
             console.log(data)
+            checkpet(data);
             document.getElementById("water-refill").innerHTML = data["feeds"][0]["field2"];
             document.getElementById("food-refill").innerHTML = data["feeds"][1]["field1"];
     
@@ -90,4 +91,28 @@ var datetime =currentdate.getHours() + ":"
 + 
 console.log(datetime)
 document.getElementById("food-time").innerHTML = datetime;
+}
+
+function checkpet(data)
+{
+    var checker=data["feeds"][0]["field3"];
+    console.log(data["feeds"][0]["field3"])
+    //checker=1;
+    if(checker===1)
+    {
+        console.log('checking')
+        document.getElementById("petalert").innerHTML = "Pet is near the feeder";
+       var pokemon= document.getElementsByClassName('alert');
+       console.log(pokemon)
+       pokemon[0].className += ' class_two'
+
+    }
+    else
+    {
+        console.log('checking')
+        //var active = document.querySelector("alert");
+        var pokemon= document.getElementsByClassName('alert');
+        pokemon[0].classList.remove("class_two");
+        document.getElementById("petalert").innerHTML = "Pet is not near the feeder";
+    }
 }
